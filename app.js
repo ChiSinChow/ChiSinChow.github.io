@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("app.js is running");
 });
 
-
 const markerData = [
     { pattern: 'markers/pattern-A.patt', gif: 'assets/earth_rotate.gif' },
 ];
-
+console.log(`coming inside here`);
 // Create the AR.js scene
 const scene = document.createElement('a-scene');
 scene.setAttribute('embedded', '');
