@@ -24,6 +24,8 @@ markerData.forEach((data, index) => {
     gifImage.setAttribute('scale', '3 3 3');
     gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
     marker.appendChild(gifImage);
+
+    console.log(`GIF added to marker ${index + 1}: ${data.gif}`);
 });
 
 // Add a camera to the scene
