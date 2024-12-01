@@ -1,4 +1,9 @@
 // Marker and GIF data
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("app.js is running");
+});
+
+
 const markerData = [
     { pattern: 'markers/pattern-A.patt', gif: 'assets/earth_rotate.gif' },
 ];
