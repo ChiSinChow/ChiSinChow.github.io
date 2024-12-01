@@ -1,6 +1,6 @@
 // Marker and GIF data
 const markerData = [
-    { pattern: 'markers/earth.jpeg', gif: 'assets/earth_rotate.gif' },
+    { pattern: 'markers/pattern-earth.patt', gif: 'assets/earth_rotate.gif' },
 ];
 
 // Create the AR.js scene
