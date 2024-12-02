@@ -19,8 +19,8 @@ markerData.forEach((data, index) => {
     // Create a GIF for the marker
     const gifImage = document.createElement('a-image');
     gifImage.setAttribute('src', data.gif); // Set GIF file
-    gifImage.setAttribute('position', '0 0.5 0');
-    gifImage.setAttribute('scale', '6 6 6');
+    gifImage.setAttribute('position', '0 0 0');
+    gifImage.setAttribute('scale', '2 2 2');
     // gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
     marker.appendChild(gifImage);
 });
