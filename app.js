@@ -35,7 +35,7 @@ document.body.appendChild(scene);
   box.setAttribute('depth', '1'); // Depth of the box
   box.setAttribute('height', '1'); // Height of the box
   box.setAttribute('width', '1'); // Width of the box
-  box.setAttribute('look-at', '[camera]'); // Make the box face the camera
+  // box.setAttribute('look-at', '[camera]'); // Make the box face the camera
 
   // Append the box to the marker
   marker.appendChild(box);
