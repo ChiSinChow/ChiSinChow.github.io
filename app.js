@@ -21,7 +21,7 @@ markerData.forEach((data, index) => {
     gifImage.setAttribute('src', data.gif); // Set GIF file
     gifImage.setAttribute('position', '0 0.5 0');
     gifImage.setAttribute('scale', '6 6 6');
-    gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
+    // gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
     marker.appendChild(gifImage);
 });
 
