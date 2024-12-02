@@ -9,23 +9,22 @@ scene.setAttribute('arjs', 'sourceType: webcam; trackingMethod: best;');
 document.body.appendChild(scene);
 
 // Loop through marker data to create markers and GIFs
-// markerData.forEach((data, index) => {
-//     // Create a marker
+markerData.forEach((data, index) => {
+    // Create a marker
     const marker = document.createElement('a-marker');
     marker.setAttribute('type', 'pattern');
     marker.setAttribute('url', data.pattern); // Set custom pattern file
     scene.appendChild(marker);
 
-//     // Create a GIF for the marker
-//     const gifImage = document.createElement('a-image');
-//     gifImage.setAttribute('src', data.gif); // Set GIF file
-//     gifImage.setAttribute('position', '0 0 0');
-//     gifImage.setAttribute('scale', '2 2 2');
-//     // gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
-//     marker.appendChild(gifImage);
-// });
+    // // Create a GIF for the marker
+    // const gifImage = document.createElement('a-image');
+    // gifImage.setAttribute('src', data.gif); // Set GIF file
+    // gifImage.setAttribute('position', '0 0 0');
+    // gifImage.setAttribute('scale', '2 2 2');
+    // // gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
+    // marker.appendChild(gifImage);
 
-// Create a box element
+    // Create a box element
   const box = document.createElement('a-box');
 
   // Set attributes for the box
@@ -38,6 +37,7 @@ document.body.appendChild(scene);
   
   // Append the box to the marker
   marker.appendChild(box);
+});
 
 // Add a camera to the scene
 const camera = document.createElement('a-entity');
