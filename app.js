@@ -11,10 +11,10 @@ document.body.appendChild(scene);
 // Loop through marker data to create markers and GIFs
 // markerData.forEach((data, index) => {
 //     // Create a marker
-//     const marker = document.createElement('a-marker');
-//     marker.setAttribute('type', 'pattern');
-//     marker.setAttribute('url', data.pattern); // Set custom pattern file
-//     scene.appendChild(marker);
+    const marker = document.createElement('a-marker');
+    marker.setAttribute('type', 'pattern');
+    marker.setAttribute('url', data.pattern); // Set custom pattern file
+    scene.appendChild(marker);
 
 //     // Create a GIF for the marker
 //     const gifImage = document.createElement('a-image');
