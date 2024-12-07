@@ -1,6 +1,6 @@
 // Marker and GIF data
 const markerData = [
-    { pattern: 'markers/pattern-A.patt', gif: 'assets/earth_rotate.gif' },
+    { pattern: 'https://drive.google.com/drive/u/1/folders/15PXp9CA4oeXG5CR9X7Uj45kWK1v9F-nm', gif: 'https://drive.google.com/drive/u/1/folders/11uaSKnIa9rbgLLGA0fOjblcf0BTjxVfX' },
 ];
 // Create the AR.js scene
 const scene = document.createElement('a-scene');
@@ -16,25 +16,14 @@ markerData.forEach((data, index) => {
     marker.setAttribute('url', data.pattern); // Set custom pattern file
     scene.appendChild(marker);
 
-    // // Create a GIF for the marker
-    // const gifImage = document.createElement('a-image');
-    // gifImage.setAttribute('src', data.gif); // Set GIF file
-    // gifImage.setAttribute('position', '0 0 0');
-    // gifImage.setAttribute('scale', '2 2 2');
-    // // gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
-    // marker.appendChild(gifImage);
+    // Create a GIF for the marker
+    const gifImage = document.createElement('a-image');
+    gifImage.setAttribute('src', data.gif); // Set GIF file
+    gifImage.setAttribute('position', '0 0 0');
+    gifImage.setAttribute('scale', '2 2 2');
+    gifImage.setAttribute('look-at', '[camera]'); // Ensure it faces the camera
+    marker.appendChild(gifImage);
 
-    // Create a box element
-  const box = document.createElement('a-box');
-
-  // Set attributes for the box
-  box.setAttribute('position', '0 0.5 0'); // Position above the marker
-  box.setAttribute('rotation', '0 0 0'); // Default rotation
-  box.setAttribute('color', '#4CC3D9'); // Blue color
-  box.setAttribute('depth', '1'); // Depth of the box
-  box.setAttribute('height', '1'); // Height of the box
-  box.setAttribute('width', '1'); // Width of the box
-  
   // Append the box to the marker
   marker.appendChild(box);
 });
