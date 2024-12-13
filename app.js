@@ -42,6 +42,8 @@ fetch('./marker.json')
             marker.setAttribute('url', item.marker);
 
             const gifImage = document.createElement('a-image');
+            gifImage.setAttribute('id', 'gif');
+            gifImage.setAttribute('style', 'display: none');
             gifImage.setAttribute('src', item.asset);
             gifImage.setAttribute('position', '0 0.5 0');
             gifImage.setAttribute('scale', '3 3 3');
