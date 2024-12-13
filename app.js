@@ -18,7 +18,10 @@ fetch('./marker.json')
             // gifImage.setAttribute('style', 'display: none');
             gifImage.setAttribute('src', item.asset);
             gifImage.setAttribute('position', '0 0.5 0');
-            gifImage.setAttribute('scale', '3 3 3');
+            gifImage.setAttribute('rotation', '90 0 0');
+            // gifImage.setAttribute('scale', '3 3 3');
+            // gifImage.setAttribute('height', '1');
+            // gifImage.setAttribute('width', '1');
             gifImage.setAttribute('look-at', '[camera]');
 
             marker.appendChild(gifImage);
