@@ -28,6 +28,8 @@ markerData.forEach((data, index) => {
   marker.appendChild(box);
 });
 
+document.querySelector('a-scene').setAttribute('vr-mode-ui', 'enabled: false');
+
 // Add a camera to the scene
 const camera = document.createElement('a-entity');
 camera.setAttribute('camera', '');
