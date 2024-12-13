@@ -1,3 +1,4 @@
 [
-    { "marker": "./markers/pattern-A.patt", "asset": "./assets/earth.jpg" }
+    { "marker": "./markers/pattern-A.patt", "asset": "./assets/earth.jpg" },
+    { "marker": "./markers/pattern-earth.patt", "asset": "./assets/A.jpg" }
 ]
