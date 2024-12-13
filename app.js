@@ -25,12 +25,11 @@ fetch('./marker.json')
             scene.appendChild(marker);
         });
 
-        document.querySelector('a-scene').setAttribute('vr-mode-ui', 'enabled: false');
-
         // Add a camera to the scene
         const camera = document.createElement('a-entity');
         camera.setAttribute('camera', '');
         scene.appendChild(camera);
-
+        
         document.body.appendChild(scene);
+        document.querySelector('a-scene').setAttribute('vr-mode-ui', 'enabled: false');
     });
