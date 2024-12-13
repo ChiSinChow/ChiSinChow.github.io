@@ -17,7 +17,7 @@
 //     scene.appendChild(marker);
 
 //     // Create a GIF for the marker
-//     const gifImage = document.createElement('a-image');
+//     const gifImage = document.createElement('a-plane');
 //     gifImage.setAttribute('src', data.gif); // Set GIF file
 //     gifImage.setAttribute('position', '0 0 0');
 //     gifImage.setAttribute('scale', '2 2 2');
@@ -35,15 +35,17 @@ fetch('./marker.json')
         scene.setAttribute('embedded', '');
         scene.setAttribute('arjs', 'sourceType: webcam; trackingMethod: best;');
         document.body.appendChild(scene);
+        
         console.log("Enter loaded json");
+        
         data.forEach(item => {
             const marker = document.createElement('a-marker');
             marker.setAttribute('type', 'pattern');
             marker.setAttribute('url', item.marker);
 
-            const gifImage = document.createElement('a-image');
-            gifImage.setAttribute('id', 'gif');
-            gifImage.setAttribute('style', 'display: none');
+            const gifImage = document.createElement('a-plane');
+            // gifImage.setAttribute('id', 'gif');
+            // gifImage.setAttribute('style', 'display: none');
             gifImage.setAttribute('src', item.asset);
             gifImage.setAttribute('position', '0 0.5 0');
             gifImage.setAttribute('scale', '3 3 3');
