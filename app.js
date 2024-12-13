@@ -35,7 +35,7 @@ fetch('./marker.json')
         scene.setAttribute('embedded', '');
         scene.setAttribute('arjs', 'sourceType: webcam; trackingMethod: best;');
         document.body.appendChild(scene);
-        Console.log("Enter loaded json");
+        console.log("Enter loaded json");
         data.forEach(item => {
             const marker = document.createElement('a-marker');
             marker.setAttribute('type', 'pattern');
