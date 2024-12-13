@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,4 +14,61 @@
 <!-- <body>
     <script src="app.js"></script>
 </body> -->
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js Marker-Based AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <a-scene embedded arjs="sourceType: webcam; trackingMethod: best;" vr-mode-ui="enabled: false">
+        <!-- Markers and GIFs will be dynamically created here -->
+    </a-scene>
+    <script>
+        fetch('./marker.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log("Loaded marker data:", data);
+                const scene = document.querySelector('a-scene');
+                
+                data.forEach(item => {
+                    console.log("Adding marker:", item.marker);
+
+                    // Marker
+                    const marker = document.createElement('a-marker');
+                    marker.setAttribute('type', 'pattern');
+                    marker.setAttribute('url', item.marker);
+
+                    // Image/GIF
+                    const gifImage = document.createElement('a-image');
+                    gifImage.setAttribute('src', item.asset);
+                    gifImage.setAttribute('position', '0 0.5 0');
+                    gifImage.setAttribute('scale', '3 3 3');
+                    gifImage.setAttribute('look-at', '[camera]');
+
+                    // Append image to marker
+                    marker.appendChild(gifImage);
+
+                    // Append marker to scene
+                    scene.appendChild(marker);
+                });
+
+                console.log("Scene setup complete!");
+            })
+            .catch(err => {
+                console.error("Error loading marker data:", err);
+            });
+    </script>
+</body>
 </html>
