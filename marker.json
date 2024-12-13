@@ -1,4 +1,3 @@
 [
-    { "marker": "https://drive.google.com/uc?export=view&id=MARKER_1_ID", "asset": "https://drive.google.com/uc?export=view&id=ASSET_1_ID" },
-    { "marker": "https://drive.google.com/uc?export=view&id=MARKER_2_ID", "asset": "https://drive.google.com/uc?export=view&id=ASSET_2_ID" }
+    { "marker": "./markers/pattern-A.patt", "asset": "./assets/earth_rotate.gif" }
 ]
