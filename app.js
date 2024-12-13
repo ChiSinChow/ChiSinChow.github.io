@@ -54,9 +54,9 @@ fetch('./marker.json')
         });
 
         document.querySelector('a-scene').setAttribute('vr-mode-ui', 'enabled: fals');
-    });
 
-// Add a camera to the scene
-const camera = document.createElement('a-entity');
-camera.setAttribute('camera', '');
-scene.appendChild(camera);
+        // Add a camera to the scene
+        const camera = document.createElement('a-entity');
+        camera.setAttribute('camera', '');
+        scene.appendChild(camera);
+    });
